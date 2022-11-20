@@ -1,0 +1,30 @@
+.mainn_image_Upload{
+    background-color: white;
+    width: 100%;
+    /* height: 40vh; */
+position: fixed;
+bottom: 0px;
+/* opacity: 01; */
+
+
+
+}
+.image_upload{
+ display: flex;   
+ flex-direction: column;
+ width: 20rem;
+ margin: 1rem auto;  
+ /* this is to center the element */
+text-align: center;
+/* background-color: whitesmoke; */
+}
+
+.image_Upload_progress{
+    width: 100%;
+    margin: 0.2rem auto;
+}
+
+.input_button{
+    margin: 0 auto;
+    
+}

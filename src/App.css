@@ -1,0 +1,47 @@
+/* mostly every thing has the margin of 10 px by default */
+*{
+  margin:0;
+}
+
+.App{
+  background-color: #fafafa;
+  position: relative;
+}
+.app_header{
+  display: flex;
+  object-fit: contain;
+  /* width: 7%; */
+  padding: 20px;
+  background-color: white;
+  border-bottom: 1px solid lightgray;
+  justify-content: space-between;
+}
+
+.app_headerImage{
+  width: 12%;
+}
+.MuiBox-root.css-1wnsr1i{
+  justify-content: center;
+  /* height: 100px; */
+  align-items: cen;
+}
+
+.app_posts{
+  padding: 20px;
+}
+
+/*
+we can use this property for column like structure instead of some other thing  
+.app_signup{
+  display: flex;
+  flex-direction: column;
+} */
+
+/* .app_posts{
+  display: flex;s
+  text-align: center;
+  justify-content: center;
+}
+ */
+
+ 
