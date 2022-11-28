@@ -1,4 +1,5 @@
 /* mostly every thing has the margin of 10 px by default */
+@import 'bootstrap/dist/css/bootstrap.min.css';
 *{
   margin:0;
 }
@@ -28,6 +29,19 @@
 
 .app_posts{
   padding: 20px;
+  /* display: flex; */
+  margin:auto ;
+  text-align: center;
+  /* justify-content: center; */
+}
+
+.image_container{
+ margin-top: 20px;
+}
+
+.image-con{
+ height:50px;
+ width: 100%;
 }
 
 /*
@@ -43,5 +57,9 @@ we can use this property for column like structure instead of some other thing
   justify-content: center;
 }
  */
+
+ .custom{
+  background-color: white;
+ }
 
  

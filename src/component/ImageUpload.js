@@ -60,9 +60,9 @@ const ImageUpload = (props)=>{
       {/* <h1>imageupload</h1> */}
       <progress className="image_Upload_progress" value={progress} max="100"/>
       {/* <h2>{`${progress}%`}</h2> */}
-      <input type="text" placeholder="enter a caption..." onChange={(e)=> setCaption(e.target.value)} onvalue={caption}/>
+      <input type="text" placeholder="enter a caption..." onChange={(e)=> setCaption(e.target.value)} onvalue={caption} className="form-control"/>
       <Button>
-      <input type="file" className="input_button" onChange={handleChange}/>
+      <input type="file" className="input_button form-control" onChange={handleChange}/>
       </Button>
       <Button onClick={handleUpload}>
          upload

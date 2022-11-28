@@ -12,23 +12,26 @@
 .post_text{
     font-weight: normal;
     padding: 20px;
+    text-align: left;
 }
 
 .post_header{
-    display: flex;
+    /* display: flex; */
     align-items: center;
     margin: 20px;
 }
 
-.post-avatar{
-    margin-right: 10px;
-}
+/* .post-avatar{
+    
+} */
 
 .post{
     max-width: 500px;
     background-color: white;
     border: 1px solid lightgray;
     margin-bottom: 45px;
+    /* margin: auto; */
+    margin-bottom: 20px;
     
     /* text-align: center; */
 }
@@ -37,11 +40,22 @@
     display: flex;
     margin-top: 10px;
     padding: 5px;
+    /* text-align: left; */
 }
+
 .post_input{
     flex: 1;
 }
 
 .post_button{
     flex: 0;
+
+}
+
+.post_avatar{
+    border: 1px solid rgb(1, 31, 80);
+}
+
+.post_comments{
+    text-align: left;
 }
