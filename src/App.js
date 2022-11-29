@@ -47,7 +47,8 @@ const style = {
 
 function App() {
   // const [userr] = useAuthState(auth)
-  const [user, setUser] = useState(() => auth.currentUser);
+  const userr = ()=> auth.currentUser;
+  const [user, setUser] = useState(userr);
   const [posts, setPosts] = useState([]);
   const [open, setOpen] = useState(false);
   const [email, setEmail] = useState("");
@@ -82,20 +83,20 @@ function App() {
         //    console.log(auth.displayName);
         // }else{
         //   // if we just created someone
-        //   updateProfile(auth.currentUser,{
-        //     displayName:username
-        //    }).then(()=>{
-        //     console.log("profile updated")
-        //    }).catch(err => err.message);
+          updateProfile(auth.currentUser,{
+            displayName:username
+           }).then(()=>{
+            console.log("profile updated")
+           }).catch(err => err.message);
         // }
         // this was not working with the createuseremailandpassword
-        updateProfile(auth.currentUser, {
-          displayName: username,
-        })
-          .then(() => {
-            console.log("profile updated");
-          })
-          .catch((err) => err.message);
+        // updateProfile(auth.currentUser, {
+        //   displayName: username,
+        // })
+        //   .then(() => {
+        //     console.log("profile updated");
+        //   })
+        //   .catch((err) => err.message);
       } else {
         setUser(null);
         // user has logged out
@@ -105,13 +106,21 @@ function App() {
       }
     });
 
-    
 
-    return () => {
-      //perform some cleanup actions before you refire the useeffect
-      unsubscribe();
-    };
+    // return () => {
+    //   //perform some cleanup actions before you refire the useeffect
+    //   unsubscribe();
+    // };
+    return unsubscribe;
   }, [user, username]);
+
+  updateProfile(auth.currentUser, {
+    displayName: username,
+  })
+    .then(() => {
+      console.log("profile updated");
+    })
+    .catch((err) => err.message);
 
   // console.log(user.displayName)
   useEffect(() => {
@@ -301,7 +310,9 @@ function App() {
           </div>
         </div>
       </div>
-      <div className="app_posts">
+      <div className="app_posts p-5 mx-5">
+      <div className="row">
+        <div className="col-6 ">
         {posts.length == 0 ? (
           <h2></h2>
         ) : (
@@ -317,6 +328,15 @@ function App() {
             />
           ))
         )}
+        </div>
+        <div className="col-6">
+        {
+        (user) && <Chatapp userR={user} />
+        }
+   {/* <Chatapp userR={user}/> */}
+        </div>
+      </div>
+        
       </div>
 
     

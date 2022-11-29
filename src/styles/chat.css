@@ -1,0 +1,24 @@
+.custommess1{
+    font-size: 0.6em;
+    text-align: left;
+}
+.custommess2{
+    text-align: left;
+    /* padding: 2em; */
+}
+/* .custommess4{
+    height:7rem;
+    width: 100%;
+} */
+.custommess5{
+    bottom: 14rem;
+    width: 43%;
+    /* padding: 2rem; */
+}
+.custommess6{
+    border: 1px solid lightgray;
+    /* border: rounded; */
+}
+/* .custommess7{
+    width:  ;
+} */
